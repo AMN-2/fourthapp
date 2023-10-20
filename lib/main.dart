@@ -183,7 +183,7 @@ class _MyAppState extends State<MyApp> {
               Container(
                 decoration: BoxDecoration(
                     border: Border.all(
-                  width: 2,
+                  width: 4,
                   color: Colors.white,
                 )),
                 child: Card(
