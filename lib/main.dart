@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, avoid_print, avoid_unnecessary_containers, sized_box_for_whitespace
+// ignore_for_file: prefer_const_constructors, avoid_print, avoid_unnecessary_containers, sized_box_for_whitespace, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
 
@@ -14,6 +14,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  String? Contry;
   bool status1 = false;
   bool status2 = false;
   bool status3 = false;
@@ -216,36 +217,116 @@ class _MyAppState extends State<MyApp> {
                 ),
               ),
               Container(
-                margin: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
+                child: Center(
+                  child: Text(
+                    "Chose Your Contry",
+                    style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.amber),
+                  ),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   border: Border.all(width: 2, color: Colors.white),
                   borderRadius: BorderRadius.circular(30),
                   color: const Color.fromARGB(255, 104, 115, 124),
                 ),
                 height: 250,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: const [
-                    Text(
-                      "Thanx",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 100,
-                        color: Color.fromARGB(255, 255, 187, 0),
+                child: ListView(
+                  children: [
+                    RadioListTile(
+                      activeColor: Colors.amber,
+                      title: Text(
+                        "Iraq",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
                       ),
+                      value: "Iraq",
+                      groupValue: Contry,
+                      onChanged: (val) {
+                        setState(() {
+                          Contry = val;
+                        });
+                      },
                     ),
-                    // Text(
-                    //   "To Use Our App ",
-                    //   style: TextStyle(
-                    //     fontSize: 15,
-                    //     fontWeight: FontWeight.bold,
-                    //     color: Colors.white,
-                    //   ),
-                    // ),
-                  ], // children
+                    RadioListTile(
+                      activeColor: Colors.amber,
+                      title: Text(
+                        "syria",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                      value: "syria",
+                      groupValue: Contry,
+                      onChanged: (val) {
+                        setState(() {
+                          Contry = val;
+                        });
+                      },
+                    ),
+                    RadioListTile(
+                      activeColor: Colors.amber,
+                      title: Text(
+                        "USA",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                      value: "USA",
+                      groupValue: Contry,
+                      onChanged: (val) {
+                        setState(() {
+                          Contry = val;
+                        });
+                      },
+                    ),
+                    RadioListTile(
+                      activeColor: Colors.amber,
+                      title: Text(
+                        "Egybt",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                      value: "Egybt",
+                      groupValue: Contry,
+                      onChanged: (val) {
+                        setState(() {
+                          Contry = val;
+                        });
+                      },
+                    ),
+                    RadioListTile(
+                      activeColor: Colors.amber,
+                      title: Text(
+                        "lubnan",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                      value: "lubnan",
+                      groupValue: Contry,
+                      onChanged: (val) {
+                        setState(() {
+                          Contry = val;
+                        });
+                      },
+                    ),
+                  ],
                 ),
               ),
-            ], // children
+            ],
           ),
         ),
       ),
